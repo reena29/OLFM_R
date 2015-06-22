@@ -1,4 +1,5 @@
-var $select = $("<select></select>");
+
+var $select = $('<select id="menuselect"></select>');
 $("#d1").append($select);
 
 //Cycle over menu links

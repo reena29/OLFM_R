@@ -4,25 +4,30 @@
    <meta charset="utf-8">
    <title>OLFM-about</title>
    <link rel="stylesheet" type="text/css" href="css/main.css">
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
   </head>
   <body>
     <header></header>
     <div id="main">
       <div id="top">
-        <a class="selected" href="about.html">About us</a>
-        <a href="contact.html">Contact us</a>
-
-      </div>
+        <a id="signed" href="#"></a>
+        <a data-toggle="modal" href="#loginModal">Login/Sign up</a>      </div>
      <div id="headimage">
         <img src="images/picture2.png" alt="Online Farmers Market">
      </div>
      <div id="d1">       
        <ul id="menu">
-        <li><a href="index.html">Home</a></li>
-                <li><a href="produce.html">Produce</a></li>
-        <li class="sign"><a href="index.html">Sign up</a></li>
-        <li><a href="#">Login</a></li>
-               </ul>
+          <li ><a href="index.html">Home</a></li>
+          <li><a href="produce.html">Produce</a></li>
+          <li class="selected"><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+                
       </div>
       <div id="info">
       </br>
@@ -41,10 +46,90 @@
     &copy;2015 OLFM
   </footer>
     </div>
+    <!--modal-->
+    <div class="modal fade" id="loginModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Login</h4>
+          </div>
+          <div class="modal-body">
+                        <div class="modal-header">
+
+            <form action="#" method="post">
+    
+    <p>
+      <label for="username">Username</label>
+      <input id="usernamel" name="username" type="text">
+    </p>
+    <p>
+      <label for="passwordl">Password</label>
+      <input id="passwordl" name="password" type="password">
+    </p>
+    
+    <p>
+      <input type="submit" value="SUBMIT" id="submitl">
+    </p>
+  </form>
+
+            </div>
+                          <h5 class="modal-title">Don't have an account?</h5><a id="hidelogin" data-toggle="modal" href="#signupModal">Sign Up</a>
+
+          </div>
+        </div>
+      </div>
+    </div>  
+
+
+
+    <div class="modal fade" id="signupModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Sign Up</h4>
+          </div>
+          <div class="modal-body">
+                      
+
+            <form action="#" method="post">
+    <p>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email">
+    </p>
+    <p>
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text">
+    </p>
+    <p>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password">
+      <span>Enter a password longer than 8 characters</span>
+    </p>
+    <p>
+      <label for="confirm_password">Confirm Password</label>
+      <input id="confirm_password" name="confirm_password" type="password">
+      <span>Please confirm your password</span>
+    </p>
+    <p>
+      <input type="submit" value="SUBMIT" id="submit">
+    </p>
+  </form>
+
+            
+        </div>
+      </div>
+    </div>  
+
+    <!--modal end-->
         <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
                           
 
               <script src="js/menus.js"></script>
+                            <script src="js/login.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 
   </body>  

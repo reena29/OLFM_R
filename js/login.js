@@ -42,17 +42,24 @@ function confirmPasswordEvent() {
 
 function enableSubmitEvent() {
   $("#submit").prop("disabled", !canSubmit());
+  
 }
+$("#submitl").click(function(){
+//var $username=$('#username').text();
+ $("#signed").text("Logout");
+
+});
 
 //When event happens on password input
-$password.focus(passwordEvent).keyup(passwordEvent).keyup(confirmPasswordEvent).keyup(enableSubmitEvent);
+$password.focus(passwordEvent).keyup(passwordEvent).keyup(enableSubmitEvent);
 
 //When event happens on confirmation input
 $confirmPassword.focus(confirmPasswordEvent).keyup(confirmPasswordEvent).keyup(enableSubmitEvent);
 
 enableSubmitEvent();
-
-
+$("#hidelogin").click(function(){
+$("#loginModal").modal('hide');
+});
 
 
 

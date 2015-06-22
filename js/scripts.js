@@ -2,13 +2,14 @@
 var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
 var $caption = $("<p></p>");
+var $cart=$('<a id="mycart" href="#">Add to cart</a>');
 
 //An image to overlay
 $overlay.append($image);
 
 //A caption to overlay
 $overlay.append($caption);
-
+$overlay.append($cart);
 //Add overlay
 $("body").append($overlay);
 
@@ -31,6 +32,9 @@ $("#produce_img a").click(function(event){
 $overlay.click(function(){
   //Hide the overlay
   $overlay.hide();
+});
+$('#mycart').click(function(){
+alert("Produce has been added to your cart.");
 });
 
 
