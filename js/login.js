@@ -1,5 +1,4 @@
-//Problem: Hints are shown even when form is valid
-//Solution: Hide and show them at appropriate times
+
 var $password = $("#password");
 var $confirmPassword = $("#confirm_password");
 
@@ -7,7 +6,7 @@ var $confirmPassword = $("#confirm_password");
 $("form span").hide();
 
 function isPasswordValid() {
-  return $password.val().length > 8;
+  return $password.val().length > 7;
 }
 
 function arePasswordsMatching() {
@@ -43,12 +42,7 @@ function confirmPasswordEvent() {
 function enableSubmitEvent() {
   $("#submit").prop("disabled", !canSubmit());
   
-}
-$("#submitl").click(function(){
-//var $username=$('#username').text();
- $("#signed").text("Logout");
-
-});
+} 
 
 //When event happens on password input
 $password.focus(passwordEvent).keyup(passwordEvent).keyup(enableSubmitEvent);
@@ -61,6 +55,25 @@ $("#hidelogin").click(function(){
 $("#loginModal").modal('hide');
 });
 
+
+/*var xhrlogin=new XMLHttpRequest();
+xhrlogin.onreadystatechange = function () {
+  if(xhrlogin.readyState === 4 && xhrlogin.status === 200) {
+        var msg = JSON.parse(xhrlogin.responseText);
+        console.log(msg[0].message);
+$('#wlcm').html(msg[0].message);
+      
+  }
+
+};
+             xhrlogin.open('GET', '../data/welcome.json');
+
+
+$('#submitl').click(function(event){
+event.preventDefault();
+$("#iModal").modal('hide');
+xhrlogin.send();
+});*/
 
 
 

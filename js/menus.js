@@ -3,7 +3,7 @@ var $select = $('<select id="menuselect"></select>');
 $("#d1").append($select);
 
 //Cycle over menu links
-$("li a").each(function(){
+$("#menu li a").each(function(){
   var $anchor = $(this);
   //Create an option
   var $option = $("<option></option>");
