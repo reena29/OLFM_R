@@ -35,6 +35,13 @@ body{
 	color: #ffcc99;
 }
 
+#wlcm{
+	font-size: 0.9em;
+	color: #ffcc99;
+	font-weight: bold;
+
+}
+
 #top span{
 	color: orange;
 }
@@ -57,12 +64,10 @@ body{
       max-height: 90%;
       margin: 0 25% 0 25%;
       border-radius: 2%;
-      /* box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.2) ;*/
 
     }  
 
 .carousel{
-           /* height: 284px;*/
            background-color:rgb(99,37,35);
 		      width: 100%;
 		      height: 20%;
@@ -82,7 +87,6 @@ body{
 		      max-width: 100%;   
 		      max-height: 20%;
 		      text-align: center;
-           /* height: 284px;*/
             
           }
           
@@ -94,13 +98,10 @@ body{
 		      max-width: 100%;   
 		      max-height: 20%;
 		      text-align: center;
-     /* height: 284px;
-      margin: 0;
-      padding: 0;*/
+     
        }
 
 .item{
-       /* height:284px;*/
        width: 100%;
       height: 100%;
       max-width: 100%;
@@ -110,13 +111,7 @@ body{
       
        }
 
-.item img{    
-	     /* width: 50%;
-	      height: 284px; 
-	      min-height: 284px;
-	      max-height: 100%;
-	      max-width: 100%;
-	      margin: 0 25% 0 25%;*/
+.item img{ 	     
 	      width: 50%;
       height: 100%;
       max-width: 50%;
@@ -136,13 +131,10 @@ body{
 
 
 #d1{
-	/*overflow: auto;*/
 	clear: left;
 	text-align: left;
 	height: auto;
-	/*height: 60px;*/
 	margin: 0 0 2% 0;
-	/*padding: 0 5px 0;*/
 	background-color: green;
 
 }
@@ -182,15 +174,8 @@ ul li.selected, #top .selected {
 	margin:0 30%;
 	text-align: left;
 	height: 100%;
-	/*size:auto;
-	max-height: auto;*/
 	background-color:black;
 	color:orange;
-	/*font-size: 0.9em;
-	overflow: hidden;
-	vertical-align: top;
-	display: inline-block; 
-	border-color:green; */
 	cursor: pointer;
 
 }
@@ -202,9 +187,6 @@ ul li.selected, #top .selected {
 	max-width:100%;
 	text-align: auto;
 	border-radius: 2%;
-	/*width: 50%;
-	height: 60%;*/
-	/*margin: 0 20%;*/
 	font-size: 0.9em;
 	color: black;
 	margin:5% 10% 0 10%; 
@@ -224,6 +206,7 @@ ul li.selected, #top .selected {
 	text-align: center;
 	font-weight: bold;
 	margin: 5% 0 0 2%;
+
 }
 
 #info #info1{
@@ -233,6 +216,18 @@ color: red;
 margin:5% 2%;
 width: 96%;
 } 
+
+#info img{
+	height:50%;
+	width: 50%;
+	margin: 0 25%;
+	border-radius:50%;
+
+}
+#info ul{
+	margin-top: 2%;
+	text-align: center;
+}
 
 #produce{
 width:90%;
@@ -355,7 +350,7 @@ input[type="submit"] {
 	width:auto;
 	height: auto;
 }
-#largeimage input{
+#largeimage input, #check input{
 	width:auto;
 	height:auto;
 	margin: 1%;
@@ -375,6 +370,7 @@ input[type="submit"] {
 }
 
 
+
 footer hr{
 	width: 70%;
 	padding:0;
@@ -385,17 +381,26 @@ footer hr{
 	color:#ffcc99; 
 }
 
+#viewcarttable th{
+	margin-right: 5%;
+	margin-bottom: 1%;
+}
+
+#viewcarttable{
+	table-layout: auto;
+	margin-bottom: 1%;
+}
 
 
 @media screen and (min-width:511px)
 {
+
 	#d1 select{
 		display: none;
 	}
 	
 	#menu li{
 		display: inline;
-	/*text-align: center;*/
 	}
 
   	form{
@@ -403,10 +408,7 @@ footer hr{
 		}
 	input[type="submit"]{
   			margin: 5% 35%;
-			}
-
-	          
-		
+			}		
 	
 }
 
@@ -422,6 +424,12 @@ footer hr{
 	font-size: 0.8em;
 	padding: 0 5px;
 		}
+		#wlcm{
+	font-size: 0.8em;
+	color: #ffcc99;
+	font-weight: bold;
+
+	}
 	#headimage {
       background-color: rgb(99,37,35);
       width: 100%;
@@ -441,13 +449,12 @@ footer hr{
     }
 
     .carousel-indicators li{
-  bottom:-25px;
+  		bottom:-25px;
+		  margin-bottom: 0;
+		  position: relative;
+		  left: 0;
 
-  margin-bottom: 0;
-  position: relative;
-  left: 0;
-
-}         
+		}         
     #main{
 	margin:1% 7.5%;
 	width: 85%;
@@ -462,9 +469,6 @@ footer hr{
 	max-width:100%;
 	text-align: auto;
 	border-radius: 2%;
-	/*width: 50%;
-	height: 60%;*/
-	/*margin: 0 20%;*/
 	font-size: 0.8em;
 	color: black;
 	margin:10% 5% 0 5%; 
@@ -472,27 +476,38 @@ footer hr{
 		}
 
 
-#info p{
-	text-align: center;
-	font-size: 1.5em;
-	font-weight: bold;
-	color: red;
-}
+	#info p{
+		text-align: center;
+		font-size: 1.5em;
+		font-weight: bold;
+		color: red;
+	}
 
-#info h4{
+	#info h4{
+		font-size: 1.2em;
+		text-align: center;
+		font-weight: bold;
+		margin: 5% 0 0 2%;
+	}
+
+	#info #info1{
+	list-style: none;
 	font-size: 1.2em;
-	text-align: center;
-	font-weight: bold;
-	margin: 5% 0 0 2%;
-}
+	color: red;
+	margin:5% 2%;
+	width: 96%;
+	}
 
-#info #info1{
-list-style: none;
-font-size: 1.2em;
-color: red;
-margin:5% 2%;
-width: 96%;
-} 	
+	#info img{
+	height:50%;
+	width: 50%;
+	margin:0 25%;
+	border-radius:50%;	
+	}
+
+	#info ul{
+	}
+
 		#produce{
 		width:100%;
 		margin: 5% 0;
@@ -596,12 +611,7 @@ width: 96%;
        }   
     .item img{
     
-           /* width: 90%;
-           height: 150px; 
-          min-height: 150px;
-      max-height: 100%;
-      max-width: 100%;
-      margin: 0 5% 0 5%;*/
+           
       width: 60%;
       height: 90%;
       max-width: 100%;
@@ -621,7 +631,7 @@ width: 96%;
 	font-size: 1.5em;
 	font-weight: bold;
 	color: red;
-}
+	}
 }
 
 @media(max-width: 680px) and (min-width:511px)
@@ -635,12 +645,12 @@ width: 96%;
 	}
 
 	.carousel-indicators li{
-  bottom:-25px;
-    margin-bottom: 0;
-  position: relative;
-  left: 0;
+	  bottom:-25px;
+	    margin-bottom: 0;
+	  position: relative;
+	  left: 0;
 
-} 
+		} 
 
 	#info p{
 	text-align: center;
@@ -735,6 +745,22 @@ width: 96%;
       margin: 0 5% 0 5%;
           }
 
+}
+@media screen and(max-width: 810px){
+	#contactp{
+		width: 50%;
+		margin: 0 25%;
+	}
+#info img{
+	height:100%;
+	width: 100%;
+	margin:0;
+	border-radius:50%;	
+	}
+
+	#info ul{
+		margin:0;
+	}
 }
 
 

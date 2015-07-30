@@ -1,4 +1,3 @@
-
 var $select = $('<select id="menuselect"></select>');
 $("#d1").append($select);
 
